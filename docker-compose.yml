@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  exchange:
+    build:
+      context: .
+      dockerfile: Dockerfile.exchange
+    container_name: currency-exchange
+    networks:
+      - app-network
+
+  robots:
+    build:
+      context: .
+      dockerfile: Dockerfile.robots
+    container_name: robot-simulation
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge 

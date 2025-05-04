@@ -1,0 +1,8 @@
+MR
+IF FLAG
+GOTO 7
+MR
+ML
+GOTO 1
+MR
+GOTO 7 
